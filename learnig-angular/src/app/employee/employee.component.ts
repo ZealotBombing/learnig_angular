@@ -11,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit { //interfaces
 
+  constructor() {
+
+  }
+
   nombre = "Fernanda"
 
-  apellido = "Piña";
+  apellido = "Piña"
 
   private edad = 26
 
@@ -21,10 +25,13 @@ export class EmployeeComponent implements OnInit { //interfaces
 
   getEnterprise(enterprise_name: string){};//this is weird
 
-  constructor() {
+  enableInput = false //WEEIRDDDD!
 
+  isRegistered = false
+
+  setIsRegistered = ()=>{
+    this.isRegistered = true
   }
-
 
   ngOnInit(): void {
 
