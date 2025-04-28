@@ -19,11 +19,15 @@ export class EmployeeComponent implements OnInit { //interfaces
 
   getEdad = () => this.edad + 1 > 20 ? "Old" : "Young"
 
-constructor(){
+  getEnterprise(enterprise_name: string){};//this is weird
 
-}
-ngOnInit(): void {
-  
-}
+  constructor() {
+
+  }
+
+
+  ngOnInit(): void {
+
+  }
 
 }

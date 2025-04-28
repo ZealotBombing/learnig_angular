@@ -1,2 +1,9 @@
-<p>{{nombre}} {{apellido}}, {{getEdad()}}</p>
+<p>Nombre: {{nombre}} {{apellido}}</p>
+<p>Edad: {{getEdad()}}</p>
+<p>Enterprise: {{enterprise.value}}</p>
 
+Enter enterprise: <input type="text" #enterprise (keyup)="0"> <!--this is weirder-->
+
+<br/>
+<br/>
+<input type="button" value="GO!" (click)="getEnterprise(enterprise.value)">
