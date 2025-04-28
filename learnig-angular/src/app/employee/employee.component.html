@@ -7,7 +7,9 @@ Enter enterprise: <input type="text" #enterprise (keyup)="0" [disabled] = "enabl
 <br/>
 <br/>
 <!-- <input type="button" value="GO!" (click)="getEnterprise(enterprise.value)"> -->
+{{registerText}}
+<br/>
+Registered: <input type="radio" name="isRegistered"  (click)="setIsRegistered($event)" value="0">
+UnRegistered: <input type="radio" name="isRegistered" (click)="setIsRegistered($event)" value="1">
 
-Registered: <input type="checkbox" id="isRegistered" [checked]="isRegistered">
-
-{{setIsRegistered()}}
+<!-- {{setIsRegistered()}} -->

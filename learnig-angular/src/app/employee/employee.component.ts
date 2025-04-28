@@ -29,10 +29,22 @@ export class EmployeeComponent implements OnInit { //interfaces
 
   isRegistered = false
 
-  setIsRegistered = ()=>{
-    this.isRegistered = true
+  registerText = "No register"
+
+  setIsRegistered = (e: Event)=>{
+    const target = e.target as HTMLInputElement
+    
+    this.isRegistered = target.value === "0"
+
+    this.registerText = this.isRegistered ? "Register" : "No register"
   }
 
+  showAlert = () =>{
+
+    this.registerText = "Registered"
+    alert(`This is an alert on ${this.isRegistered ? "check" : "uncheck"}`)
+  } 
+  
   ngOnInit(): void {
 
   }
