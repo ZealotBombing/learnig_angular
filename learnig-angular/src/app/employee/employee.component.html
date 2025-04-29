@@ -1,8 +1,10 @@
 <p>Nombre: {{nombre}} {{apellido}}</p>
 <p>Edad: {{getEdad()}}</p>
-<p>Enterprise: {{enterprise.value}}</p>
+<p>Enterprise: {{empresa}}</p>
 
-Enter enterprise: <input type="text" #enterprise (keyup)="0" [disabled] = "enableInput"> <!--this is weirder-->
+<!-- Enter enterprise: <input type="text" #enterprise (keyup)="0" [disabled] = "enableInput"> this is weirder -->
+
+Enter enterprise: <input type="text" [(ngModel)]="empresa">
 
 <br/>
 <br/>

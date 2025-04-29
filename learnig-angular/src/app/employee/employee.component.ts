@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {FormsModule } from '@angular/forms'
 
 @Component({
   selector: 'app-employee',
-  imports: [EmployeeComponent],
+  imports: [EmployeeComponent, FormsModule],
   templateUrl: './employee.component.html',
   // template: "<p>Fernanda Piña</p>",
   styleUrl: './employee.component.css',
@@ -29,6 +30,8 @@ export class EmployeeComponent implements OnInit { //interfaces
 
   isRegistered = false
 
+  empresa = ""
+
   registerText = "No register"
 
   setIsRegistered = (e: Event)=>{
@@ -45,6 +48,9 @@ export class EmployeeComponent implements OnInit { //interfaces
     alert(`This is an alert on ${this.isRegistered ? "check" : "uncheck"}`)
   } 
   
+
+
+
   ngOnInit(): void {
 
   }
