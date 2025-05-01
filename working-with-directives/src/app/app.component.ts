@@ -1,21 +1,22 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, NgIf, NgFor],
+  imports: [RouterOutlet, FormsModule, NgIf, NgFor,NgStyle, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'User Register';
 
-  name = '';
-  lastName = '';
-  message = '';
-  registered = false;
+  name: string = '';
+  lastName: string = '';
+  message: string = '';
+  registered:  boolean = false;
+  position: string = "";
 
   entries: any[];
 

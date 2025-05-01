@@ -8,12 +8,23 @@
   <label class="form-label">Last Name</label><br/>
   <input type="text" name="lastName" class="form-control" [(ngModel)]="lastName">
   <br/>
+
+  <label class="form-label">Position</label><br/>
+  <input type="text" name="position" class="form-control" [(ngModel)]="position">
+  <br/>
+
   <input type="submit" value="Sign Up" class="btn btn-primary" (click)="registerUser()">
+
+  
 </form>
 
 <br/>
 
-<p *ngIf="registered; else notRegistered">{{message}}: {{name}} {{lastName}}</p>
+<!-- <p *ngIf="registered; else notRegistered">{{message}}: {{name}} {{lastName}}, <span [ngStyle]="{color: position === 'director' ? 'red' : 'blue' }"> {{position}}</span></p> -->
+<!-- <p>{{message}}: {{name}} {{lastName}}, <span [ngStyle]="{color: position === 'director' ? 'red' : 'blue' }"> {{position}}</span></p> -->
+<p>{{message}}: {{name}} {{lastName}}, <span [ngClass] ="{director: position === 'director'}"> {{position}}</span></p>
+
+
 
 <ng-template #notRegistered>
   <p>No register</p>
